@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku</title>
+    <link href='https://fonts.googleapis.com/css?family=Anton' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <script src="sudoku.js"></script>
+</head>
+<body>
+<section>
+        
+    <header>
+        <h1>SUDOKU</h1>
+    </header>
+    <div class="rules">   
+        <button commandfor="sudoku" type="button" command="show-modal" class="rules_boutton" >Voir les rêgles du jeu</button>
+        <dialog id="sudoku" class="rules_dialog">
+            <h3>Règle du Jeu :</h3>
+            <p>Le but du jeu est de remplir ces cases avec des chiffres allant de 1 à 9 en veillant toujours à ce qu'un même chiffre ne figure qu'une seule fois par colonne, une seule fois par ligne, et une seule fois par carré de neuf cases.</p>
+            <p>Le bouton <strong>Supprimer ?</strong> permet de supprimer la case sélectionnée sauf si elle est remplie par le chiffre correct.</p>
+            <p>Le bouton <strong>Supprimer Tout</strong> permet de supprimer toutes les cases qui sont des erreurs.</p>
+            <p>Le bouton <strong>Indice</strong> donne un indice sur une case pendant 1 seconde.</p>
+            <p>Le bouton <strong>Solution</strong> révèle la solution complète du Sudoku.</p>
+            <p>Le bouton <strong>Recommencer</strong> permet de réinitialiser la grille.</p>
+            <button commandfor="sudoku" type="button" command="close" class="rules_boutton" >Fermer</button>
+        </dialog>
+        <p>Erreur: <span id="fautes"> 0</span></p>
+        <div class="confetti" id="confetti"></div>
+    </div>
+    <div class="grid" id="grid"></div>
+</section>
+<section class="information">
+    <div class="victory" id="victory">
+        <h2>BRAVO !!!</h2>
+    </div>
+    <div>
+        <button class="option" id="delete">Supprimer ?</button>
+    </div>
+        <div>
+        <button class="option" id="delete_all">Supprimer Tout</button>
+    </div>
+        <div>
+        <button class="option" id="hint">Indice</button>
+    </div>
+        <div>
+        <button class="option" id="resolve">Solution</button>
+    </div>
+    <div>
+        <button class="option" id="restart">Recommencer</button>
+    </div>
+</section>
+</body>
+</html>
+
+
+
